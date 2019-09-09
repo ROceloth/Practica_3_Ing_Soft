@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "Home/base.html" %}
+
+<html>
+{% block body_content %}
+<head>
+	<title>About me</title>
+	<!--El centrado lo intento directamente aquí, aun no domino por completo el css,
+		pero la imagen y el backround si estan en los static-->
+	<style type="text/css">
+		body{
+			margin-left: 35%;
+			margin-right: 35%;
+		}
+	</style>
+	
+
+</head>
+
+<body>
+	<h1>About me</h1>
+	{% load static %}
+	<img src="{% static "Home/BichoAndMe.jpg" %}" alt="Una foto con mi gato">
+	<blockquote>Para conseguir un cambio, ¿que estas dispuesto a cambiar?</blockquote>
+</body>
+{% endblock %}
+<!--No entregue la practica pasada, pero con esta ya me puse al corriente,srr -->
+</html>
