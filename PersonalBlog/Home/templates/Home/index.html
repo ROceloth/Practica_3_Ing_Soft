@@ -5,6 +5,25 @@
 <body>
 	<h1>William Oceloth Zaldivar Rico</h1>
 	<p>Welcome to my first app in Django, take it easy Im a begginer in this.</p>
+
+	{% for post in posts %}
+
+	<a href="{% url 'onePost' post.id %}">
+	<div class="post">
+	    <div class="post_title">
+	        <b>{{ post.title }}</b>
+	    </div>
+	    <div class="post_date">
+	        {{ post.date }}
+	    </div>
+	    <div class="post_paragraph">
+	        {{ post.paragraph }}
+	    </div>
+	</div>
+
+	{% endfor %}
+
+	
 	<h6>algo</h6>
 </body>
 </html>
