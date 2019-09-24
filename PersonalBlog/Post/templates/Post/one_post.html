@@ -4,7 +4,18 @@
 
 {% block body_content %}
 
+
+<link rel="stylesheet" href="{% static 'Post/one_post.css' %}">
+
 <a href="{% url 'index' %}">Home</a>
+
+<div id="post">
+    {% if post.image %}
+    <picture id="post-image">
+        <img src="{{ post.image.url }}">
+    </picture>
+    {% endif %}
+
 
 <h1> {{ post.title }} </h1>
 <div class="">
